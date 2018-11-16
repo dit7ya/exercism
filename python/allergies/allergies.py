@@ -12,13 +12,13 @@ class Allergies(object):
 
     def __init__(self, score):
         self.score = score % 256
-        self.allergen_list = [
+        self._allergen_list = [
             key for key in self.items_dict.keys() if self.is_allergic_to(key)
         ]
 
     def is_allergic_to(self, item):
-        return self.score & self.items_dict[item] == self.items_dict[item]
+        return self.score & self.items_dict[item] != 0
 
     @property
     def lst(self):
-        return self.allergen_list
+        return self._allergen_list
