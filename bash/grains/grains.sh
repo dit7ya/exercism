@@ -6,8 +6,7 @@
 
 if [ "$1" = "total" ]
 then
-    to=$(echo 2^64 - 1 | bc)
-    echo "$to"
+    echo 2^64 - 1 | bc
 
 elif [ "$1" -gt "64" ] || [ "$1" -le "0" ]
 then
@@ -15,6 +14,5 @@ then
     exit 1
 
 else
-    grains=$(echo "(2^($1 - 1))" | bc)
-    echo "$grains"
+    echo "(2^($1 - 1))" | bc
 fi
