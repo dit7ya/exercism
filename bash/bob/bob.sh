@@ -10,14 +10,19 @@ then
 
 elif [[ $phrase =~ \?$ ]]
 then
-    if [[ $phrase =~ [a-z0-9\!\@\#\$\%\^\&\*] ]]   #check if there is any lowercase letter
+    if [[  ]]
+
+
+
+
+    if [[ $phrase =~ [a-z0-9\W] ]]   #check if there is any lowercase letter
     then
         echo "Sure."
     else
         echo "Calm down, I know what I'm doing!"
     fi
 
-elif [[ $phrase =~ [a-z0-9] ]]
+elif [[ $phrase =~ [a-z0-9\W] ]]
 then
     echo 'Whatever.'
 
@@ -27,6 +32,8 @@ fi
 
 
 exit 0
+
+
 
 
 
