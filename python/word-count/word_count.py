@@ -1,10 +1,11 @@
 import re
+from collections import Counter
+
+
 def word_count(phrase):
-    reg = r'([a-z0-9\']+)'
+    reg = r"([a-z0-9\']+)"
     words = re.findall(reg, phrase.lower())
-    words = [word[1:-1] if word[0] == '\'' and word[-1] == '\'' else word for word in words]
-    d = {}
-    for word in words:
-        d[word] = words.count(word)
+    words = map(lambda x: x.strip("'"), words)
+    d = Counter(words)
 
     return d
