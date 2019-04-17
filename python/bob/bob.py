@@ -1,7 +1,7 @@
 def hey(phrase):
 
     phrase = phrase.strip()
-    
+
     if not phrase or phrase.isspace():
         return 'Fine. Be that way!'
     elif phrase[-1] == '?':
