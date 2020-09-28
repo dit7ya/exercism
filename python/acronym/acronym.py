@@ -4,7 +4,4 @@ def abbreviate(words):
     words = [string.split() for string in string_list]  # converts the pieces of strings to words by splitting with space
     words = [item for sublist in words for item in sublist]      # flattens list
 
-    acr = ''.join([word[0].upper() for word in words])
-
-
-    return acr
+    return ''.join([word[0].upper() for word in words])
