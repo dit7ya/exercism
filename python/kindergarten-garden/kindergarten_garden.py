@@ -8,5 +8,4 @@ class Garden(object):
         for idx, name in enumerate(self.students):
             self._plants[name] = self.diagram[0][idx*2:idx*2 + 2] + self.diagram[1][idx*2:idx*2 + 2]
     def plants(self, student):
-        plants = [self.PLANTS[i] for i in self._plants[student]]
-        return plants
+        return [self.PLANTS[i] for i in self._plants[student]]
