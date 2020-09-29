@@ -11,7 +11,7 @@ class Luhn:
         for idx, digit in enumerate(reversed(self.card_num)):
             if idx % 2 == 0:
                 s += int(digit)
-            elif 2 * int(digit) > 9:
+            elif int(digit) > 9 / 2:
                 s += 2 * int(digit) - 9
             else:
                 s += 2 * int(digit)
