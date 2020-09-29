@@ -8,16 +8,12 @@ class Luhn:
             return False
 
         s = 0
-        for digit in list(reversed(self.card_num))[1::2]:
-            if 2 * int(digit) > 9:
-                s+= 2* int(digit) - 9
+        for idx, digit in enumerate(reversed(self.card_num)):
+            if idx % 2 == 0:
+                s += int(digit)
+            elif 2 * int(digit) > 9:
+                s += 2 * int(digit) - 9
             else:
-                s+= 2*int(digit)
+                s += 2 * int(digit)
 
-        for digit in list(reversed(self.card_num))[::2]:
-            s+= int(digit)
-
-        return s%10 == 0
-
-
-print(Luhn("234 567 891 234").valid())
+        return s % 10 == 0
