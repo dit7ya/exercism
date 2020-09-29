@@ -9,11 +9,7 @@ class Luhn:
 
         s = 0
         for digit in list(reversed(self.card_num))[1::2]:
-            if 2 * int(digit) > 9:
-                s+= 2* int(digit) - 9
-            else:
-                s+= 2*int(digit)
-
+            s += 2* int(digit) - 9 if int(digit) > 9 / 2 else 2*int(digit)
         for digit in list(reversed(self.card_num))[::2]:
             s+= int(digit)
 
