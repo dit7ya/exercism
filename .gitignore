@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,python,emacs,elisp,commonlisp,lua,elm,elixir,go,kotlin,racket,rust,scheme,haskell,clojure
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,python,emacs,elisp,commonlisp,lua,elm,elixir,go,kotlin,racket,rust,scheme,haskell,clojure
 
+
+### Exercism
+.exercism/
+
 ### Clojure ###
 pom.xml
 pom.xml.asc
