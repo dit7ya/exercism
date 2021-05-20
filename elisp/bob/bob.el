@@ -22,8 +22,6 @@
 
   )
 
-(response-for "ME   ")
-(= (string-blank-p " ") 0)
 
 (provide 'bob)
 ;;; bob.el ends here

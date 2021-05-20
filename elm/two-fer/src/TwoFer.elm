@@ -1,8 +1,8 @@
 module TwoFer exposing (twoFer)
 
+import Maybe exposing (withDefault)
+
 
 twoFer : Maybe String -> String
 twoFer name =
-    case name of
-        Just s -> "One for "++ s++", one for me."
-        Nothing -> "One for you, one for me."
+    "One for " ++ withDefault "you" name ++ ", one for me."

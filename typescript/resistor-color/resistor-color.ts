@@ -1,18 +1,18 @@
-const colorValues: { [color: string]: number } = {
-  black: 0,
-  brown: 1,
-  red: 2,
-  orange: 3,
-  yellow: 4,
-  green: 5,
-  blue: 6,
-  violet: 7,
-  grey: 8,
-  white: 9,
-};
+export const COLORS = [
+  `black`,
+  `brown`,
+  `red`,
+  `orange`,
+  `yellow`,
+  `green`,
+  `blue`,
+  `violet`,
+  `grey`,
+  `white`,
+] as const;
 
-export const colorCode = (color: string): number => {
-  return colorValues[color]
-}
+export type Color = typeof COLORS[number]
 
-export const COLORS = Object.keys(colorValues)
+export const colorCode = (color: Color): number => COLORS.indexOf(color)
+
+
